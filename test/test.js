@@ -1,4 +1,4 @@
-var test = require("tap").test
+var test = require("tape")
     , forEach = require("..")
 
 test("forEach calls each iterator", function (t) {
@@ -25,3 +25,4 @@ test("forEach calls iterator with correct this value", function (t) {
         t.equal(this, thisValue)
     }, thisValue)
 })
+
