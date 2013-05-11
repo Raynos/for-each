@@ -1,5 +1,7 @@
 # for-each [![build status][1]][2]
 
+[![browser support][3]][4]
+
 A better forEach.
 
 ## Example
@@ -26,3 +28,6 @@ forEach({ key: "value" }, function (value, key) {
 
   [1]: https://secure.travis-ci.org/Raynos/for-each.png
   [2]: http://travis-ci.org/Raynos/for-each
+  [3]: https://ci.testling.com/Raynos/for-each.png
+  [4]: https://ci.testling.com/Raynos/for-each
+

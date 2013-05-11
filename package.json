@@ -33,6 +33,23 @@
   ],
   "scripts": {
     "test": "node test/test.js"
+  },
+  "testling": {
+    "files": "test/test.js",
+    "browsers": [
+      "iexplore/6.0..latest",
+      "firefox/3.0..6.0",
+      "firefox/15.0..latest",
+      "firefox/nightly",
+      "chrome/4.0..10.0",
+      "chrome/20.0..latest",
+      "chrome/canary",
+      "opera/10.0..latest",
+      "opera/next",
+      "safari/4.0..latest",
+      "ipad/6.0..latest",
+      "iphone/6.0..latest"
+    ]
   }
 }
 
