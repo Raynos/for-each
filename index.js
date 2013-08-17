@@ -1,11 +1,13 @@
 module.exports = forEach
 
+var toString = Object.prototype.toString
+
 function forEach(list, iterator, context) {
-    if (typeof iterator !== 'function') {
+    if (toString.call(iterator) !== '[object Function]') {
         throw new TypeError('iterator must be a function')
     }
 
-    var isArray = Object.prototype.toString.call(list) === '[object Array]'
+    var isArray = toString.call(list) === '[object Array]'
         , isString = typeof list === 'string'
         , keys = isString ? list : Object.keys(list)
 
