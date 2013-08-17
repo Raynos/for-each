@@ -23,7 +23,7 @@
   "dependencies": {
   },
   "devDependencies": {
-    "tape": "~1.0.2"
+    "tape": "~1.0.4"
   },
   "licenses": [
     {
@@ -48,7 +48,8 @@
       "opera/next",
       "safari/4.0..latest",
       "ipad/6.0..latest",
-      "iphone/6.0..latest"
+      "iphone/6.0..latest",
+      "android-browser/4.2"
     ]
   }
 }
