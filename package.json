@@ -23,7 +23,7 @@
   "dependencies": {
   },
   "devDependencies": {
-    "tape": "~1.0.4"
+    "tape": "~1.1.0"
   },
   "licenses": [
     {
