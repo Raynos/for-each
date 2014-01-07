@@ -6,12 +6,22 @@ A better forEach.
 
 ## Example
 
-Like `Array.prototype.forEach` but works on objects
+Like `Array.prototype.forEach` but works on objects.
 
-``` js
+```js
 var forEach = require("for-each")
 
-forEach({ key: "value" }, function (value, key) {
+forEach({ key: "value" }, function (value, key, object) {
+    /* code */
+})
+```
+
+As a bonus, it's also a perfectly function shim/polyfill for arrays too!
+
+```js
+var forEach = require("for-each")
+
+forEach([1, 2, 3], function (value, index, array) {
     /* code */
 })
 ```
