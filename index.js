@@ -1,10 +1,12 @@
+var isFunction = require('is-function')
+
 module.exports = forEach
 
 var toString = Object.prototype.toString
 var hasOwnProperty = Object.prototype.hasOwnProperty
 
 function forEach(list, iterator, context) {
-    if (toString.call(iterator) !== '[object Function]') {
+    if (!isFunction(iterator)) {
         throw new TypeError('iterator must be a function')
     }
 
