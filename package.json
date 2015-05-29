@@ -7,6 +7,7 @@
   "repository": "git://github.com/Raynos/for-each.git",
   "main": "index",
   "homepage": "https://github.com/Raynos/for-each",
+  "license": "MIT",
   "contributors": [
     {
       "name": "Jake Verbaten"
