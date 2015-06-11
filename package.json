@@ -25,7 +25,9 @@
     "is-function": "^1.0.1"
   },
   "devDependencies": {
-    "tape": "^4.0.0"
+    "tape": "^4.0.0",
+    "jscs": "^1.13.1",
+    "eslint": "^0.22.1"
   },
   "licenses": [
     {
@@ -34,7 +36,10 @@
     }
   ],
   "scripts": {
-    "test": "node test/test.js"
+    "test": "node test/test.js",
+    "lint": "npm run jscs && npm run eslint",
+    "jscs": "jscs *.js test/*.js",
+    "eslint": "eslint *.js test/*.js"
   },
   "testling": {
     "files": "test/test.js",
