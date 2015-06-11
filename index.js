@@ -1,46 +1,48 @@
-var isFunction = require('is-function')
+var isFunction = require('is-function');
 
-module.exports = forEach
+module.exports = forEach;
 
-var toString = Object.prototype.toString
-var hasOwnProperty = Object.prototype.hasOwnProperty
+var toString = Object.prototype.toString;
+var hasOwnProperty = Object.prototype.hasOwnProperty;
 
-function forEach(list, iterator, context) {
+function forEach(list, iterator, thisArg) {
     if (!isFunction(iterator)) {
-        throw new TypeError('iterator must be a function')
+        throw new TypeError('iterator must be a function');
     }
 
-    if (arguments.length < 3) {
-        context = this
+    var receiver;
+    if (arguments.length >= 3) {
+        receiver = thisArg;
     }
-    
-    if (toString.call(list) === '[object Array]')
-        forEachArray(list, iterator, context)
-    else if (typeof list === 'string')
-        forEachString(list, iterator, context)
-    else
-        forEachObject(list, iterator, context)
+
+    if (toString.call(list) === '[object Array]') {
+        forEachArray(list, iterator, receiver);
+    } else if (typeof list === 'string') {
+        forEachString(list, iterator, receiver);
+    } else {
+        forEachObject(list, iterator, receiver);
+    }
 }
 
-function forEachArray(array, iterator, context) {
+function forEachArray(array, iterator, receiver) {
     for (var i = 0, len = array.length; i < len; i++) {
         if (hasOwnProperty.call(array, i)) {
-            iterator.call(context, array[i], i, array)
+            iterator.call(receiver, array[i], i, array);
         }
     }
 }
 
-function forEachString(string, iterator, context) {
+function forEachString(string, iterator, receiver) {
     for (var i = 0, len = string.length; i < len; i++) {
         // no such thing as a sparse string.
-        iterator.call(context, string.charAt(i), i, string)
+        iterator.call(receiver, string.charAt(i), i, string);
     }
 }
 
-function forEachObject(object, iterator, context) {
+function forEachObject(object, iterator, receiver) {
     for (var k in object) {
         if (hasOwnProperty.call(object, k)) {
-            iterator.call(context, object[k], k, object)
+            iterator.call(receiver, object[k], k, object);
         }
     }
 }
