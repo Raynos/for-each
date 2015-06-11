@@ -2,7 +2,7 @@ var isCallable = require('is-callable');
 
 module.exports = forEach;
 
-var toString = Object.prototype.toString;
+var toStr = Object.prototype.toString;
 var hasOwnProperty = Object.prototype.hasOwnProperty;
 
 function forEach(list, iterator, thisArg) {
@@ -15,7 +15,7 @@ function forEach(list, iterator, thisArg) {
         receiver = thisArg;
     }
 
-    if (toString.call(list) === '[object Array]') {
+    if (toStr.call(list) === '[object Array]') {
         forEachArray(list, iterator, receiver);
     } else if (typeof list === 'string') {
         forEachString(list, iterator, receiver);
