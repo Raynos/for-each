@@ -1,4 +1,4 @@
-var isFunction = require('is-function');
+var isCallable = require('is-callable');
 
 module.exports = forEach;
 
@@ -6,7 +6,7 @@ var toString = Object.prototype.toString;
 var hasOwnProperty = Object.prototype.hasOwnProperty;
 
 function forEach(list, iterator, thisArg) {
-    if (!isFunction(iterator)) {
+    if (!isCallable(iterator)) {
         throw new TypeError('iterator must be a function');
     }
 

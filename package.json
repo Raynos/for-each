@@ -22,7 +22,7 @@
     "email": "raynos2@gmail.com"
   },
   "dependencies": {
-    "is-function": "^1.0.1"
+    "is-callable": "^1.0.4"
   },
   "devDependencies": {
     "tape": "^4.0.0",
