@@ -22,10 +22,10 @@
     "email": "raynos2@gmail.com"
   },
   "dependencies": {
-    "is-function": "~1.0.0"
+    "is-function": "^1.0.1"
   },
   "devDependencies": {
-    "tape": "~1.1.0"
+    "tape": "^4.0.0"
   },
   "licenses": [
     {
