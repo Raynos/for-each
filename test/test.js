@@ -1,4 +1,4 @@
-/*globals window */
+/* globals window */
 
 var test = require('tape');
 var forEach = require('../');
@@ -103,10 +103,10 @@ test('object', function (t) {
     };
     var keys = ['a', 'b', 'c'];
 
-    function F() {
+    var F = function F() {
         this.a = 1;
         this.b = 2;
-    }
+    };
     F.prototype.c = 3;
     var fKeys = ['a', 'b'];
 
