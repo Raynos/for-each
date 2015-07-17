@@ -1,11 +1,44 @@
 var isCallable = require('is-callable');
 
-module.exports = forEach;
-
 var toStr = Object.prototype.toString;
 var hasOwnProperty = Object.prototype.hasOwnProperty;
 
-function forEach(list, iterator, thisArg) {
+var forEachArray = function forEachArray(array, iterator, receiver) {
+    for (var i = 0, len = array.length; i < len; i++) {
+        if (hasOwnProperty.call(array, i)) {
+            if (receiver != null) {
+                iterator.call(receiver, array[i], i, array);
+            } else {
+                iterator(array[i], i, array);
+            }
+        }
+    }
+};
+
+var forEachString = function forEachString(string, iterator, receiver) {
+    for (var i = 0, len = string.length; i < len; i++) {
+        // no such thing as a sparse string.
+        if (receiver != null) {
+            iterator.call(receiver, string.charAt(i), i, string);
+        } else {
+            iterator(string.charAt(i), i, string);
+        }
+    }
+};
+
+var forEachObject = function forEachObject(object, iterator, receiver) {
+    for (var k in object) {
+        if (hasOwnProperty.call(object, k)) {
+            if (receiver != null) {
+                iterator.call(receiver, object[k], k, object);
+            } else {
+                iterator(object[k], k, object);
+            }
+        }
+    }
+};
+
+var forEach = function forEach(list, iterator, thisArg) {
     if (!isCallable(iterator)) {
         throw new TypeError('iterator must be a function');
     }
@@ -22,39 +55,6 @@ function forEach(list, iterator, thisArg) {
     } else {
         forEachObject(list, iterator, receiver);
     }
-}
+};
 
-function forEachArray(array, iterator, receiver) {
-    for (var i = 0, len = array.length; i < len; i++) {
-        if (hasOwnProperty.call(array, i)) {
-            if (receiver != null) {
-                iterator.call(receiver, array[i], i, array);
-            } else {
-                iterator(array[i], i, array);
-            }
-        }
-    }
-}
-
-function forEachString(string, iterator, receiver) {
-    for (var i = 0, len = string.length; i < len; i++) {
-        // no such thing as a sparse string.
-        if (receiver != null) {
-            iterator.call(receiver, string.charAt(i), i, string);
-        } else {
-            iterator(string.charAt(i), i, string);
-        }
-    }
-}
-
-function forEachObject(object, iterator, receiver) {
-    for (var k in object) {
-        if (hasOwnProperty.call(object, k)) {
-            if (receiver != null) {
-                iterator.call(receiver, object[k], k, object);
-            } else {
-                iterator(object[k], k, object);
-            }
-        }
-    }
-}
+module.exports = forEach;

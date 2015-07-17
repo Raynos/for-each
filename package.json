@@ -36,7 +36,7 @@
     }
   ],
   "scripts": {
-    "test": "node test/test.js",
+    "test": "npm run lint && node test/test.js",
     "lint": "npm run jscs && npm run eslint",
     "jscs": "jscs *.js test/*.js",
     "eslint": "eslint *.js test/*.js"
