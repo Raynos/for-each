@@ -1,3 +1,5 @@
+'use strict';
+
 /* globals window */
 
 var test = require('tape');

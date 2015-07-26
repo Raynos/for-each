@@ -1,3 +1,5 @@
+'use strict';
+
 var isCallable = require('is-callable');
 
 var toStr = Object.prototype.toString;
