@@ -6,6 +6,7 @@
 	"rules": {
 		"max-nested-callbacks": [2, 3],
 		"max-params": [2, 3],
-		"max-statements": [2, 14]
+		"max-statements": [2, 14],
+		"no-invalid-this": [1]
 	}
 }
