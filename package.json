@@ -25,9 +25,9 @@
     "is-callable": "^1.0.4"
   },
   "devDependencies": {
-    "tape": "^4.0.2",
-    "jscs": "^2.0.0",
-    "eslint": "^1.0.0",
+    "tape": "^4.2.0",
+    "jscs": "^2.1.0",
+    "eslint": "^1.1.0",
     "@ljharb/eslint-config": "^1.0.4",
     "nsp": "^1.0.3"
   },
