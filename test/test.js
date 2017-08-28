@@ -16,7 +16,7 @@ test('forEach calls each iterator', function (t) {
             t.equal(value, 2);
             t.equal(key, 'b');
         }
-        count++;
+        count += 1;
     });
 });
 
@@ -32,14 +32,14 @@ test('forEach calls iterator with correct this value', function (t) {
 
 test('second argument: iterator', function (t) {
     var arr = [];
-    t.throws(function () { forEach(arr); }, TypeError, 'undefined is not a function');
-    t.throws(function () { forEach(arr, null); }, TypeError, 'null is not a function');
-    t.throws(function () { forEach(arr, ''); }, TypeError, 'string is not a function');
-    t.throws(function () { forEach(arr, /a/); }, TypeError, 'regex is not a function');
-    t.throws(function () { forEach(arr, true); }, TypeError, 'true is not a function');
-    t.throws(function () { forEach(arr, false); }, TypeError, 'false is not a function');
-    t.throws(function () { forEach(arr, NaN); }, TypeError, 'NaN is not a function');
-    t.throws(function () { forEach(arr, 42); }, TypeError, '42 is not a function');
+    t['throws'](function () { forEach(arr); }, TypeError, 'undefined is not a function');
+    t['throws'](function () { forEach(arr, null); }, TypeError, 'null is not a function');
+    t['throws'](function () { forEach(arr, ''); }, TypeError, 'string is not a function');
+    t['throws'](function () { forEach(arr, /a/); }, TypeError, 'regex is not a function');
+    t['throws'](function () { forEach(arr, true); }, TypeError, 'true is not a function');
+    t['throws'](function () { forEach(arr, false); }, TypeError, 'false is not a function');
+    t['throws'](function () { forEach(arr, NaN); }, TypeError, 'NaN is not a function');
+    t['throws'](function () { forEach(arr, 42); }, TypeError, '42 is not a function');
     t.doesNotThrow(function () { forEach(arr, function () {}); }, 'function is a function');
     t.doesNotThrow(function () { forEach(arr, setTimeout); }, 'setTimeout is a function');
     if (typeof window !== 'undefined') {
@@ -169,7 +169,7 @@ test('string', function (t) {
     var str = 'str';
     t.test('second iterator argument', function (st) {
         var counter = 0;
-        st.plan(str.length * 2 + 1);
+        st.plan((str.length * 2) + 1);
         forEach(str, function (item, index) {
             st.equal(counter, index, 'index ' + index + ' is passed as second argument');
             st.equal(str.charAt(index), item);

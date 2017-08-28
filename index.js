@@ -8,10 +8,10 @@ var hasOwnProperty = Object.prototype.hasOwnProperty;
 var forEachArray = function forEachArray(array, iterator, receiver) {
     for (var i = 0, len = array.length; i < len; i++) {
         if (hasOwnProperty.call(array, i)) {
-            if (receiver != null) {
-                iterator.call(receiver, array[i], i, array);
-            } else {
+            if (receiver == null) {
                 iterator(array[i], i, array);
+            } else {
+                iterator.call(receiver, array[i], i, array);
             }
         }
     }
@@ -20,10 +20,10 @@ var forEachArray = function forEachArray(array, iterator, receiver) {
 var forEachString = function forEachString(string, iterator, receiver) {
     for (var i = 0, len = string.length; i < len; i++) {
         // no such thing as a sparse string.
-        if (receiver != null) {
-            iterator.call(receiver, string.charAt(i), i, string);
-        } else {
+        if (receiver == null) {
             iterator(string.charAt(i), i, string);
+        } else {
+            iterator.call(receiver, string.charAt(i), i, string);
         }
     }
 };
@@ -31,10 +31,10 @@ var forEachString = function forEachString(string, iterator, receiver) {
 var forEachObject = function forEachObject(object, iterator, receiver) {
     for (var k in object) {
         if (hasOwnProperty.call(object, k)) {
-            if (receiver != null) {
-                iterator.call(receiver, object[k], k, object);
-            } else {
+            if (receiver == null) {
                 iterator(object[k], k, object);
+            } else {
+                iterator.call(receiver, object[k], k, object);
             }
         }
     }
