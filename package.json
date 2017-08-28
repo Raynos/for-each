@@ -39,7 +39,8 @@
   ],
   "scripts": {
     "pretest": "npm run lint",
-    "test": "node test/test.js",
+    "test": "npm run tests-only",
+    "tests-only": "node test/test",
     "posttest": "npm run security",
     "lint": "npm run jscs && npm run eslint",
     "jscs": "jscs *.js test/*.js",
