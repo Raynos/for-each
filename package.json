@@ -27,7 +27,6 @@
   "devDependencies": {
     "@ljharb/eslint-config": "^12.2.1",
     "eslint": "^4.19.1",
-    "jscs": "^3.0.7",
     "nsp": "^3.2.1",
     "tape": "^4.9.0"
   },
@@ -42,9 +41,7 @@
     "test": "npm run tests-only",
     "tests-only": "node test/test",
     "posttest": "npm run security",
-    "lint": "npm run jscs && npm run eslint",
-    "jscs": "jscs *.js test/*.js",
-    "eslint": "eslint *.js test/*.js",
+    "lint": "eslint *.js test/*.js",
     "security": "nsp check"
   },
   "testling": {
