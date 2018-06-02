@@ -1,13 +1,12 @@
 {
   "name": "for-each",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "A better forEach",
   "keywords": [],
   "author": "Raynos <raynos2@gmail.com>",
   "repository": "git://github.com/Raynos/for-each.git",
   "main": "index",
   "homepage": "https://github.com/Raynos/for-each",
-  "license": "MIT",
   "contributors": [
     {
       "name": "Jake Verbaten"
@@ -30,6 +29,7 @@
     "nsp": "^3.2.1",
     "tape": "^4.9.0"
   },
+  "license": "MIT",
   "licenses": [
     {
       "type": "MIT",
