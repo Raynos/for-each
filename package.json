@@ -26,10 +26,10 @@
   },
   "devDependencies": {
     "@ljharb/eslint-config": "^12.2.1",
-    "eslint": "^4.5.0",
+    "eslint": "^4.19.1",
     "jscs": "^3.0.7",
-    "nsp": "^2.7.0",
-    "tape": "^4.8.0"
+    "nsp": "^3.2.1",
+    "tape": "^4.9.0"
   },
   "licenses": [
     {
