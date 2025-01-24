@@ -21,12 +21,6 @@
     "email": "raynos2@gmail.com"
   },
   "license": "MIT",
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "http://github.com/Raynos/for-each/raw/master/LICENSE"
-    }
-  ],
   "scripts": {
     "pretest": "npm run lint",
     "test": "npm run tests-only",
