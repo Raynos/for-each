@@ -26,7 +26,6 @@
   "devDependencies": {
     "@ljharb/eslint-config": "^12.2.1",
     "eslint": "^4.19.1",
-    "nsp": "^3.2.1",
     "tape": "^4.9.0"
   },
   "license": "MIT",
@@ -40,9 +39,8 @@
     "pretest": "npm run lint",
     "test": "npm run tests-only",
     "tests-only": "node test/test",
-    "posttest": "npm run security",
-    "lint": "eslint *.js test/*.js",
-    "security": "nsp check"
+    "posttest": "npx npm@\">= 10.2\" audit --production",
+    "lint": "eslint *.js test/*.js"
   },
   "testling": {
     "files": "test/test.js",
