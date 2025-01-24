@@ -5,6 +5,27 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v0.3.4](https://github.com/ljharb/for-each/compare/v0.3.3...v0.3.4) - 2025-01-24
+
+### Commits
+
+- [meta] use `auto-changelog` [`c16ee6a`](https://github.com/ljharb/for-each/commit/c16ee6a125eb3c6d30f626b4b02ec849a63fca28)
+- [Tests] add github actions [`379b59c`](https://github.com/ljharb/for-each/commit/379b59c8f282c2281ba668e3e028ad6410afb99b)
+- [meta] delete `.travis.yml` [`09e5c77`](https://github.com/ljharb/for-each/commit/09e5c779651215c41bd4727e266a5e7ebb3b0a4d)
+- [Dev Deps] update eslint things [`9163b86`](https://github.com/ljharb/for-each/commit/9163b86435be325965f096ac17793a0e783b1c1e)
+- [meta] consolidate eslintrc files [`f2ab52b`](https://github.com/ljharb/for-each/commit/f2ab52b6944fe8c1a189957889276950393eddb3)
+- [meta] add `funding` field and `FUNDING.yml` [`05d21b3`](https://github.com/ljharb/for-each/commit/05d21b382ccd4627b283d1a31c49935c7d79fd57)
+- [Tests] up to `node` `v10`; use `nvm install-latest-npm` [`7c06cbd`](https://github.com/ljharb/for-each/commit/7c06cbdabea81ba029cd466545dea5cb9f24f528)
+- [Tests] add `nyc` [`0f4643e`](https://github.com/ljharb/for-each/commit/0f4643e6a572bdc6967a17be8e7b959600edbbd2)
+- [meta] use `npmignore` [`39a975c`](https://github.com/ljharb/for-each/commit/39a975c8c6050586b93b5e0a98b20be44d1b38d4)
+- [meta] remove unnecessary `licenses` key [`3d064f1`](https://github.com/ljharb/for-each/commit/3d064f12167c12d8e1d1ee1447ee58d8211c63e1)
+- [Tests] use `npm audit` instead of long-dead `nsp` [`d4c722a`](https://github.com/ljharb/for-each/commit/d4c722a0f61f61d93965328f436f87421bce9973)
+- [Dev Deps] update `tape` [`552c1ae`](https://github.com/ljharb/for-each/commit/552c1ae6a01728ff312d47605dbdb961ef0ccbcc)
+- Update README.md [`d19acc2`](https://github.com/ljharb/for-each/commit/d19acc23624eed9d8f59b9fa64e6e3cba638aa52)
+- [meta] add missing `engines.node` [`8889b49`](https://github.com/ljharb/for-each/commit/8889b49bd737d7a72c2a515eb2ee39a01c813bac)
+- [meta] create SECURITY.md [`9069d42`](https://github.com/ljharb/for-each/commit/9069d42d245b02ae7c5f0c193fceb55427436e4e)
+- [Deps] update `is-callable` [`bfa51d1`](https://github.com/ljharb/for-each/commit/bfa51d18018477843147bcdcc6cc63eb045151f5)
+
 ## [v0.3.3](https://github.com/ljharb/for-each/compare/v0.3.2...v0.3.3) - 2018-06-01
 
 ### Commits
