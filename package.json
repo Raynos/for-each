@@ -30,7 +30,7 @@
   "scripts": {
     "pretest": "npm run lint",
     "test": "npm run tests-only",
-    "tests-only": "node test/test",
+    "tests-only": "tape 'test/*.js'",
     "posttest": "npx npm@\">= 10.2\" audit --production",
     "lint": "eslint --ext=js,mjs ."
   },
@@ -40,7 +40,7 @@
   "devDependencies": {
     "@ljharb/eslint-config": "^21.1.1",
     "eslint": "=8.8.0",
-    "tape": "^4.9.0"
+    "tape": "^5.9.0"
   },
   "testling": {
     "files": "test/test.js"
