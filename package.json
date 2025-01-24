@@ -4,7 +4,13 @@
   "description": "A better forEach",
   "keywords": [],
   "author": "Raynos <raynos2@gmail.com>",
-  "repository": "git://github.com/Raynos/for-each.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Raynos/for-each.git"
+  },
+  "funding": {
+    "url": "https://github.com/sponsors/ljharb"
+  },
   "main": "index",
   "homepage": "https://github.com/Raynos/for-each",
   "contributors": [
