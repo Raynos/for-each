@@ -34,6 +34,7 @@
     "tests-only": "nyc tape 'test/*.js'",
     "posttest": "npx npm@\">= 10.2\" audit --production",
     "lint": "eslint --ext=js,mjs .",
+    "postlint": "tsc && attw -P",
     "version": "auto-changelog && git add CHANGELOG.md",
     "postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\""
   },
@@ -41,12 +42,17 @@
     "is-callable": "^1.2.7"
   },
   "devDependencies": {
+    "@arethetypeswrong/cli": "^0.17.3",
     "@ljharb/eslint-config": "^21.1.1",
+    "@ljharb/tsconfig": "^0.2.3",
+    "@types/is-callable": "^1.1.2",
+    "@types/tape": "^5.8.1",
     "auto-changelog": "^2.5.0",
     "eslint": "=8.8.0",
     "npmignore": "^0.3.1",
     "nyc": "^10.3.2",
-    "tape": "^5.9.0"
+    "tape": "^5.9.0",
+    "typescript": "next"
   },
   "testling": {
     "files": "test/test.js"
